@@ -2,27 +2,33 @@ package cse360assignment02;
 
 public class AddingMachine {
   private int total;
+  StringBuffer history;
   
   public AddingMachine () {
     total = 0;  // not needed - included for clarity
+    history = new StringBuffer("0");
   }
   
   public int getTotal () {
-    return 0;
+    return total;
   }
   
   public void add (int value) {
-	  //adding this for a test
+	  total = total + value;
+	  history.append(" + "+value);
   }
 
   public void subtract (int value) {
-	//adding this for a test
+	  total = total - value;
+	  history.append(" - "+value);
   }
 
   public String toString () {
-    return "";
+	System.out.print(history.toString());
+	return history.toString();
   }
 
   public void clear() {
+	  total = 0;
   }
 }
