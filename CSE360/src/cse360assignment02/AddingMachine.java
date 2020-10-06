@@ -12,9 +12,11 @@ public class AddingMachine {
   }
   
   public void add (int value) {
+	  //adding this for a test
   }
 
   public void subtract (int value) {
+	//adding this for a test
   }
 
   public String toString () {
